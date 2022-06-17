@@ -11,11 +11,11 @@ defmodule SpellbookFedorov.MagicSchools.Entities.MagicSchool do
     :description
   ]
 
-   schema "magic_schools" do
+   schema "magicschools" do
     field :name, :string
     field :description, :string
 
-    has_many :spells, Spell
+    # has_many :spells1, Spell
 
     timestamps()
    end
