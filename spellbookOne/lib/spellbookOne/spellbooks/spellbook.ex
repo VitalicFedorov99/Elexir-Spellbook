@@ -1,12 +1,12 @@
 defmodule  SpellbookOne.Spellbooks do
-  alias SpellbookOne.Spellbook.Commands.
+  alias SpellbookOne.Spellbooks.Commands.
   {
     CreateSpellbook,
     UpdateSpellbook,
     DeleteSpellbook
   }
 
-  alias SpellbookOne.Spellbook.Queries.
+  alias SpellbookOne.Spellbooks.Queries.
   {
     GetSpellbook,
     ListSpellbooks

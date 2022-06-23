@@ -32,9 +32,9 @@ defmodule SpellbookOneWeb.V1.SpellbookControllerTest do
             # ]
             %{
               "entries" => [
-                %{"id" => spellbook_1.id, "nickname" => spellbook_1.nickname},
-                %{"id" => spellbook_2.id, "nickname" => spellbook_2.nickname},
-                %{"id" => spellbook_3.id, "nickname" => spellbook_3.nickname}
+                %{"id" => spellbook_1.id, "name_spellbook" => spellbook_1.name_spellbook},
+                %{"id" => spellbook_2.id, "name_spellbook" => spellbook_2.name_spellbook},
+                %{"id" => spellbook_3.id, "name_spellbook" => spellbook_3.name_spellbook}
               ],
               "page_number" => 1,
               "page_size" => 5,

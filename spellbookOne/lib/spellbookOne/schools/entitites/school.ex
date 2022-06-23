@@ -25,7 +25,7 @@ defmodule SpellbookOne.Schools.Entities.School do
     # belongs_to :magic_school, MagicSchool
 
     # many_to_many :spellbooks, Spellbook, join_through: "spellbooks_spells"
-    # timestamps()
+    timestamps()
    end
 
    def create_changeset(%__MODULE__{} = school, attrs) do

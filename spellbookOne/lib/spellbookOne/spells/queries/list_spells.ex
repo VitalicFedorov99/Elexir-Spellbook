@@ -8,21 +8,21 @@ defmodule SpellbookOne.Spells.Queries.ListSpells do
 
   def process(params) do
     Spell
-    |> with_level(params)
+    |> with_rang(params)
     |> with_name(params)
     |> select_fields()
     |> Repo.all()
   end
 
 
-  defp with_level(query, %{level: nil}), do: query
+  defp with_rang(query, %{rang_id: nil}), do: query
 
-  defp with_level(query, %{level: level}) do
+  defp with_rang(query, %{rang_id: rang_id}) do
     from i in query,
-    where: i.level > ^level
+    where: i.rang_id > ^rang_id
   end
 
-  defp with_level(query, _), do: query
+  defp with_rang(query, _), do: query
 
   defp with_name(query, %{name: name}) when is_binary(name) do
     name = "%" <> String.trim(name) <> "%"
