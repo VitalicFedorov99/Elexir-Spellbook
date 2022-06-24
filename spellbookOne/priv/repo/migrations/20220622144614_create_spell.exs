@@ -8,6 +8,7 @@ defmodule SpellbookOne.Repo.Migrations.CreateSpell do
       # add :school_id, references(:school)
       add :time, :integer
       add :cost, :integer
+      add :rang, :integer
       # add :rang_id, references(:rangs)
       timestamps()
     end

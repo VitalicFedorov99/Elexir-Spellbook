@@ -10,10 +10,12 @@ defmodule SpellbookOne.Rangs.Entities.Rang do
    ]
 
 
-   schema "rang" do
+   schema "rangs" do
     field :name, :string
     field :description, :string
     has_many :spells, Spell
+
+    timestamps()
    end
 
    def create_changeset(%__MODULE__{} = rang, attrs) do

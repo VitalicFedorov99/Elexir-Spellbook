@@ -6,7 +6,7 @@ defmodule SpellbookOneWeb.V1.SpellController do
   action_fallback(SpellbookOneWeb.FallbackController)
 
   def index(conn, %{"current_user" => current_user} = _params) do
-    spells = Spells.list_spells()
+    spells = Spells.list_spells(_params)
     render(conn,"index.json",%{spells: spells})
   end
 

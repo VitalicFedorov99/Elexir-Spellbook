@@ -7,7 +7,7 @@ defmodule SpellbookOne.Spells.Entities.Spell do
   import Ecto.Changeset
   @required [
    :name,
-   :rang_id
+   :rang
   #  :type_element,
   #  :school,
   #  :level
@@ -25,9 +25,9 @@ defmodule SpellbookOne.Spells.Entities.Spell do
     field :description, :string
     field :time, :integer
     field :cost, :integer
+    field :rang, :integer
 
     belongs_to :school, School
-    belongs_to :rang, Rang
 
     many_to_many :locations, SpellbookOne.Locations.Entities.Location, join_through: SpellLocations
     many_to_many :spellbooks, Spellbook, join_through: "spellbooks_spells"

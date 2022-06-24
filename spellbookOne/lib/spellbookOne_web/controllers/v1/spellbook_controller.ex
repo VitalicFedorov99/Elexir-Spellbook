@@ -26,8 +26,8 @@ defmodule SpellbookOneWeb.V1.SpellbookController do
     with {:ok, params} <- ApplyParams.do_apply(IndexSearchParams, params) do
       # spellbooks = Spellbooks.list_spellbooks(current_user, params)
       # render(conn, "index.json", %{spellbooks: spellbooks})
-      page = Spellbooks.list_spellbooks(current_user, params)
-      render(conn, "index.json", %{page: page})
+      spellbooks = Spellbooks.list_spellbooks(current_user, params)
+      render(conn, "index.json", %{spellbooks: spellbooks})
     end
   end
 

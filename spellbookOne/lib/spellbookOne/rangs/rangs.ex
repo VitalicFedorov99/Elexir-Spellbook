@@ -1,4 +1,4 @@
-defmodule  SpellbookOne.Rang do
+defmodule SpellbookOne.Rangs do
   alias SpellbookOne.Rangs.Commands.
   {
     CreateRang,

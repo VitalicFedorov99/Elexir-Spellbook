@@ -8,7 +8,8 @@ defmodule SpellbookOneWeb.V1.SpellView do
   def render("show.json", %{spell: spell}) do
     %{
      id: spell.id,
-     name: spell.name
+     name: spell.name,
+     rang: spell.rang
     }
   end
 end

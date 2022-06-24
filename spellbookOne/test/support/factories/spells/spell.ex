@@ -10,12 +10,14 @@ defmodule SpellbookOne.Factories.Spells.SpellFactory do
        name = Map.get(attrs, :name, Lorem.sentence(5..10))
        description = Map.get(attrs, :description, Lorem.sentence(10..20))
        time = Map.get(attrs, :time, Enum.random(1..10))
+       rang = Map.get(attrs, :rang, Enum.random(1..5))
        cost = Map.get(attrs, :cost, Enum.random(1..100))
 
        %Spell
        {
         #  name: sequence(:name, &"#{name}_#{&1}"),
          name: name,
+         rang: rang,
          description: description,
          time: time,
          cost: cost
